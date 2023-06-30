@@ -1,0 +1,38 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+
+    <title>Home page</title>
+    <style>
+        nav a{
+            padding: 10px;
+            text-decoration: none;
+            color: red;
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+
+    {% if username %}
+        <b style="margin:50px;">Welcome to the home page {{username}}</b>  
+        <b>Your account number is {{PO.account_number}}</b>
+        <b>Your mobile number {{PO.mobile_number}}  </b> 
+        <b>Your current balance is {{PO.balance}}</b>
+        <a href="{% url 'history_display' %}">History</a>
+           
+<nav style="display: inline;">
+    <a href="{% url 'transaction_form' %}" id="a" style="display: inline-block;">To Mobile Number</a>
+    <a href="{% url 'transaction_using_acno' %}" id="a" style="display: inline;">To Account Number</a>
+
+
+
+
+    <a href="" id="a">changepassword</a>
+</nav>
+    {% else %}
+        <h1>welcome to the home page </h1>
+    {% endif %}
+
+
+{% endblock %}

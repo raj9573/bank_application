@@ -1,0 +1,20 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title>Transaction Page</title>
+{% endblock %}
+{% block body_block %}
+
+<h2 style="text-align:center;">Register the below form to create an account in our bank</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label for="mobile_number">Enter Mobile_number Who u need to send </label>
+    <input type="number" name="mobile_number" id="mobile_number"><br><br>
+
+    <label for="money">Enter amount</label>
+    <input type="number" name="money" id="money"><br><br>
+
+    <input type="submit" value="send money">
+</form>
+{% endblock body_block %}

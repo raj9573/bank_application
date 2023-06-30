@@ -1,0 +1,23 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+ 
+ <title>History Page</title>
+
+{% endblock %}
+
+{% block body_block %}
+ 
+<h1>History Page</h1>
+
+<div>
+{% for i in DD %}
+    {{i.MONEY}} debited to {{i.RECEIVER}} <br>
+
+{% endfor %}
+</div>
+{% for j in CD %}
+
+    {{j.MONEY}} credited from  {{j.SENDER}} <br>
+{% endfor %}
+{% endblock %}

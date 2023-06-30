@@ -1,0 +1,17 @@
+{% extends 'dummy.html' %}
+
+
+{% block body_block %}
+        
+<form method="POST">
+    {% csrf_token %}
+     <label for="Cacno">Enter Acno whom you need to send</label>
+    <input type="number" name="Cacno" id="Cacno"> <br><br>
+
+    <label for="money">Enter money</label>
+    <input type="number" name="money" id="money"><br><br>
+
+    <input type="submit" value="Send money">
+
+</form>
+{% endblock body_block %}

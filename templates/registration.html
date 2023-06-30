@@ -1,0 +1,19 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title>Registration Page</title>
+{% endblock %}
+
+{% block body_block %}
+
+<h2 style="text-align:center;">Register the below form to create an account in our bank</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{UF.as_p}}
+    {{PF.as_p}}
+    <label for="balance">How much money you want to deposit minimum 500</label>
+    <input type="number" name="balance" id="balance"> <br><br>
+    <input type="submit" value="Register">
+</form>
+{% endblock body_block %}
